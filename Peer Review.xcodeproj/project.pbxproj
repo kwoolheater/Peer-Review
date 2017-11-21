@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		41678C3E1FC330D500446E36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41678C3D1FC330D500446E36 /* AppDelegate.swift */; };
-		41678C401FC330D500446E36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41678C3F1FC330D500446E36 /* ViewController.swift */; };
+		41678C401FC330D500446E36 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41678C3F1FC330D500446E36 /* HomeViewController.swift */; };
 		41678C431FC330D500446E36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41678C411FC330D500446E36 /* Main.storyboard */; };
 		41678C451FC330D500446E36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41678C441FC330D500446E36 /* Assets.xcassets */; };
 		41678C481FC330D500446E36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41678C461FC330D500446E36 /* LaunchScreen.storyboard */; };
@@ -18,7 +18,7 @@
 /* Begin PBXFileReference section */
 		41678C3A1FC330D500446E36 /* Peer Review.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Peer Review.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		41678C3D1FC330D500446E36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		41678C3F1FC330D500446E36 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		41678C3F1FC330D500446E36 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		41678C421FC330D500446E36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		41678C441FC330D500446E36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41678C471FC330D500446E36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,9 +57,9 @@
 			isa = PBXGroup;
 			children = (
 				41678C3D1FC330D500446E36 /* AppDelegate.swift */,
-				41678C3F1FC330D500446E36 /* ViewController.swift */,
-				41678C411FC330D500446E36 /* Main.storyboard */,
+				41678C3F1FC330D500446E36 /* HomeViewController.swift */,
 				41678C4F1FC367A300446E36 /* CoreDataStack.swift */,
+				41678C411FC330D500446E36 /* Main.storyboard */,
 				41678C441FC330D500446E36 /* Assets.xcassets */,
 				41678C461FC330D500446E36 /* LaunchScreen.storyboard */,
 				41678C491FC330D500446E36 /* Info.plist */,
@@ -140,7 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				41678C501FC367A300446E36 /* CoreDataStack.swift in Sources */,
-				41678C401FC330D500446E36 /* ViewController.swift in Sources */,
+				41678C401FC330D500446E36 /* HomeViewController.swift in Sources */,
 				41678C3E1FC330D500446E36 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -171,6 +171,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -228,6 +229,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

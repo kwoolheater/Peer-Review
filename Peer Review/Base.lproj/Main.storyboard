@@ -16,14 +16,98 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="POu-7S-nUt">
+                                <rect key="frame" x="31" y="114" width="312" height="56"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Star" translatesAutoresizingMaskIntoConstraints="NO" id="7Ew-yB-4dB">
+                                        <rect key="frame" x="0.0" y="0.0" width="56" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="56" id="5ZA-sy-gT6"/>
+                                            <constraint firstAttribute="height" constant="56" id="VBz-e0-YzO"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Star" translatesAutoresizingMaskIntoConstraints="NO" id="U1l-A1-SzW">
+                                        <rect key="frame" x="64" y="0.0" width="56" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="56" id="GSk-Br-2ZF"/>
+                                            <constraint firstAttribute="height" constant="56" id="ccY-h6-J69"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Star" translatesAutoresizingMaskIntoConstraints="NO" id="gYY-oc-lp7">
+                                        <rect key="frame" x="128" y="0.0" width="56" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="56" id="Joh-gl-csu"/>
+                                            <constraint firstAttribute="height" constant="56" id="SPE-Nr-CGG"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Star" translatesAutoresizingMaskIntoConstraints="NO" id="cUl-PY-cjg">
+                                        <rect key="frame" x="192" y="0.0" width="56" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="56" id="KvA-zc-JrI"/>
+                                            <constraint firstAttribute="height" constant="56" id="wsQ-X5-tD8"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Star" translatesAutoresizingMaskIntoConstraints="NO" id="nWd-UW-QPT">
+                                        <rect key="frame" x="256" y="0.0" width="56" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="56" id="dpv-qc-kiN"/>
+                                            <constraint firstAttribute="height" constant="56" id="p0j-F3-E7j"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rating:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Luc-je-2Db">
+                                <rect key="frame" x="107" y="188" width="76" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTR-eN-IY3">
+                                <rect key="frame" x="191" y="188" width="63" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RbK-nX-iHR">
+                                <rect key="frame" x="0.0" y="252" width="375" height="366"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRA-IK-Vjh">
+                                <rect key="frame" x="0.0" y="20" width="375" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="POu-7S-nUt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="94" id="3qe-lp-c37"/>
+                            <constraint firstItem="POu-7S-nUt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="31" id="egd-5g-N92"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="POu-7S-nUt" secondAttribute="trailing" constant="32" id="lCE-IR-32u"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="POu-7S-nUt" secondAttribute="bottom" constant="448" id="yx9-bd-Rnh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="Ak7-m5-3xp"/>
+                    <connections>
+                        <outlet property="fifthStar" destination="nWd-UW-QPT" id="RZd-ff-0df"/>
+                        <outlet property="firstStar" destination="7Ew-yB-4dB" id="QlL-Rb-73T"/>
+                        <outlet property="fourthStar" destination="cUl-PY-cjg" id="BXS-yF-wr2"/>
+                        <outlet property="ratingLabel" destination="MTR-eN-IY3" id="ism-jS-h5R"/>
+                        <outlet property="secondStar" destination="U1l-A1-SzW" id="eup-7c-3AY"/>
+                        <outlet property="tableView" destination="RbK-nX-iHR" id="9V5-vG-hq5"/>
+                        <outlet property="thirdStar" destination="gYY-oc-lp7" id="G6C-wZ-Ywg"/>
+                        <outlet property="usernameLabel" destination="BRA-IK-Vjh" id="O6T-kZ-n2W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="90" y="-271"/>
+            <point key="canvasLocation" x="88.799999999999997" y="-271.21439280359823"/>
         </scene>
         <!--Item 2-->
         <scene sceneID="jMk-HW-mMK">
@@ -60,4 +144,7 @@
             <point key="canvasLocation" x="-859" y="165"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Star" width="2156" height="2051"/>
+    </resources>
 </document>
