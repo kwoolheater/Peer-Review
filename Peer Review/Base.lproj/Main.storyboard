@@ -17,35 +17,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rating:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Luc-je-2Db">
-                                <rect key="frame" x="107" y="188" width="76" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Luc-je-2Db">
+                                <rect key="frame" x="107" y="164.5" width="76" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTR-eN-IY3">
-                                <rect key="frame" x="191" y="188" width="63" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTR-eN-IY3">
+                                <rect key="frame" x="191" y="164.5" width="57" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RbK-nX-iHR">
-                                <rect key="frame" x="0.0" y="252" width="375" height="366"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RbK-nX-iHR">
+                                <rect key="frame" x="0.0" y="215.5" width="375" height="402.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRA-IK-Vjh">
-                                <rect key="frame" x="0.0" y="20" width="375" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRA-IK-Vjh">
+                                <rect key="frame" x="0.0" y="20" width="375" height="32.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yPl-LY-6qC" customClass="CosmosView" customModule="Cosmos">
-                                <rect key="frame" x="39" y="111" width="296" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yPl-LY-6qC" customClass="CosmosView" customModule="Cosmos">
+                                <rect key="frame" x="39" y="84.5" width="296" height="55"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="starSize">
@@ -64,6 +59,28 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="RbK-nX-iHR" firstAttribute="top" secondItem="MTR-eN-IY3" secondAttribute="bottom" constant="21" id="087-fO-7yo"/>
+                            <constraint firstItem="RbK-nX-iHR" firstAttribute="top" secondItem="Luc-je-2Db" secondAttribute="bottom" constant="21" id="0af-3c-BBV"/>
+                            <constraint firstItem="RbK-nX-iHR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3Nh-yt-y0z"/>
+                            <constraint firstItem="Luc-je-2Db" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="55C-jj-XJ7"/>
+                            <constraint firstItem="yPl-LY-6qC" firstAttribute="top" secondItem="BRA-IK-Vjh" secondAttribute="bottom" constant="32" id="5Do-3u-USl"/>
+                            <constraint firstItem="Luc-je-2Db" firstAttribute="top" secondItem="yPl-LY-6qC" secondAttribute="bottom" constant="25" id="DlM-Gh-Iw4"/>
+                            <constraint firstItem="MTR-eN-IY3" firstAttribute="top" secondItem="yPl-LY-6qC" secondAttribute="bottom" constant="25" id="GEN-kL-Y2f"/>
+                            <constraint firstItem="BRA-IK-Vjh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Stc-wK-A5r"/>
+                            <constraint firstItem="Luc-je-2Db" firstAttribute="top" secondItem="yPl-LY-6qC" secondAttribute="bottom" constant="25" id="TSD-tU-vi6"/>
+                            <constraint firstItem="yPl-LY-6qC" firstAttribute="top" secondItem="BRA-IK-Vjh" secondAttribute="bottom" constant="32" id="Uc7-yW-Y0A"/>
+                            <constraint firstItem="RbK-nX-iHR" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="VQP-bs-aqc"/>
+                            <constraint firstItem="RbK-nX-iHR" firstAttribute="top" secondItem="Luc-je-2Db" secondAttribute="bottom" constant="21" id="ZxP-yJ-GpR"/>
+                            <constraint firstItem="yPl-LY-6qC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="39" id="Zyg-q7-yGL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yPl-LY-6qC" secondAttribute="trailing" constant="40" id="a6L-4z-Dd9"/>
+                            <constraint firstItem="MTR-eN-IY3" firstAttribute="leading" secondItem="Luc-je-2Db" secondAttribute="trailing" constant="8" id="cfL-22-FG4"/>
+                            <constraint firstItem="BRA-IK-Vjh" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="f8r-VG-fvH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MTR-eN-IY3" secondAttribute="trailing" constant="127" id="pYN-ZE-jwY"/>
+                            <constraint firstItem="BRA-IK-Vjh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tgp-M3-ypc"/>
+                            <constraint firstItem="RbK-nX-iHR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="tyu-rA-yvC"/>
+                            <constraint firstItem="MTR-eN-IY3" firstAttribute="leading" secondItem="Luc-je-2Db" secondAttribute="trailing" constant="8" id="xj9-Jb-Bgw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="Ak7-m5-3xp"/>

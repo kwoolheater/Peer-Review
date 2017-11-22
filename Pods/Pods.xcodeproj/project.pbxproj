@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -71,15 +71,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00670A98B0D5C7FA65800B96566CA2E2 /* pb_common.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_common.c; sourceTree = "<group>"; };
-		008449EB11E5DDF24B6385DAA45C3C0B /* Pods_Peer_Review.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Peer_Review.framework; path = "Pods-Peer Review.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		00670A98B0D5C7FA65800B96566CA2E2 /* pb_common.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; path = pb_common.c; sourceTree = "<group>"; };
+		008449EB11E5DDF24B6385DAA45C3C0B /* Pods_Peer_Review.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Peer_Review.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A6A8B05E13ACD8EAFF06FF1280C0F17 /* nanopb.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = nanopb.xcconfig; sourceTree = "<group>"; };
-		0C9EE8C2F6063D61C764526518409E09 /* nanopb.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = nanopb.modulemap; sourceTree = "<group>"; };
+		0C9EE8C2F6063D61C764526518409E09 /* nanopb.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = nanopb.modulemap; sourceTree = "<group>"; };
 		15BFFB792650F2C5FA26C8AE6486D3DF /* Cosmos.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cosmos.xcconfig; sourceTree = "<group>"; };
 		1C7E089DD57C37813F2715B7098BF515 /* Cosmos-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Cosmos-dummy.m"; sourceTree = "<group>"; };
-		1E3529DAEB0213D16A0E097F33E16A33 /* Cosmos.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Cosmos.modulemap; sourceTree = "<group>"; };
-		1ED983B6F2F2F0CDE9083C3CD175D8B9 /* pb_decode.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_decode.c; sourceTree = "<group>"; };
-		1EDAD354328F7DC66F774BCF70537AED /* pb_encode.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_encode.c; sourceTree = "<group>"; };
+		1E3529DAEB0213D16A0E097F33E16A33 /* Cosmos.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Cosmos.modulemap; sourceTree = "<group>"; };
+		1ED983B6F2F2F0CDE9083C3CD175D8B9 /* pb_decode.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; path = pb_decode.c; sourceTree = "<group>"; };
+		1EDAD354328F7DC66F774BCF70537AED /* pb_encode.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; path = pb_encode.c; sourceTree = "<group>"; };
 		241FA6EDCA03303354B25D94674F9D63 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
 		272BD279ACC3A7F6907DB7BFBD6B6D9D /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
 		334CD28133596A5FD0D224D8BA4408E7 /* GoogleToolboxForMac-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleToolboxForMac-prefix.pch"; sourceTree = "<group>"; };
@@ -89,10 +89,10 @@
 		3AA24E8075C95614FA96D950195C60DA /* CosmosDefaultSettings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosDefaultSettings.swift; path = Cosmos/CosmosDefaultSettings.swift; sourceTree = "<group>"; };
 		3C53DCD401848D84F71A17576CB0AFB5 /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Core/Sources/Firebase.h; sourceTree = "<group>"; };
 		476DC0859B2B5751DBF5E1AADCFCFC9E /* GTMNSData+zlib.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GTMNSData+zlib.m"; path = "Foundation/GTMNSData+zlib.m"; sourceTree = "<group>"; };
-		497422B0CD6FB38E9758C276AA50306F /* GoogleToolboxForMac.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = GoogleToolboxForMac.modulemap; sourceTree = "<group>"; };
+		497422B0CD6FB38E9758C276AA50306F /* GoogleToolboxForMac.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = GoogleToolboxForMac.modulemap; sourceTree = "<group>"; };
 		49F131B0649E66F89A45743309C43F87 /* nanopb-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "nanopb-dummy.m"; sourceTree = "<group>"; };
 		4C9A8C54E01FCD0568E6414B163CC4E1 /* CosmosText.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosText.swift; path = Cosmos/CosmosText.swift; sourceTree = "<group>"; };
-		504F093C97E22BE672ED91A750158FD3 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GoogleToolboxForMac.framework; path = GoogleToolboxForMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		504F093C97E22BE672ED91A750158FD3 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoogleToolboxForMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B62DAB45ED475179AFF6BC3DE053F9B /* Pods-Peer Review.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Peer Review.debug.xcconfig"; sourceTree = "<group>"; };
 		5C2F09672D47103800AD97017300FD98 /* GoogleToolboxForMac-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GoogleToolboxForMac-dummy.m"; sourceTree = "<group>"; };
 		5CE95C40D60508A8757444C3A4701CAE /* GoogleToolboxForMac-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleToolboxForMac-umbrella.h"; sourceTree = "<group>"; };
@@ -111,9 +111,9 @@
 		8EBD90CDB4E44ADE1E3C34EB4C84D91F /* CosmosLayers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosLayers.swift; path = Cosmos/CosmosLayers.swift; sourceTree = "<group>"; };
 		9156FE87ADC0D12F03F95A05BD0C2F2C /* CosmosTouch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosTouch.swift; path = Cosmos/CosmosTouch.swift; sourceTree = "<group>"; };
 		930216C73A97EFAF7A9F1071302910B4 /* FirebaseNanoPB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseNanoPB.framework; path = Frameworks/FirebaseNanoPB.framework; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A6A6181177EA0CBD0BA6240085192305 /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = Frameworks/FirebaseCore.framework; sourceTree = "<group>"; };
-		A76FD1D59828351C0C7BA854EEEB000C /* Pods-Peer Review.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Peer Review.modulemap"; sourceTree = "<group>"; };
+		A76FD1D59828351C0C7BA854EEEB000C /* Pods-Peer Review.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Peer Review.modulemap"; sourceTree = "<group>"; };
 		ABB2AFA7FF8069AC4C3D7F74A161D98E /* Cosmos-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cosmos-prefix.pch"; sourceTree = "<group>"; };
 		ADAF459692D83824D0DDD0E3D22CBCDF /* pb_common.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb_common.h; sourceTree = "<group>"; };
 		AED75AEB53B9AB5260A8219CC16574A6 /* pb_encode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb_encode.h; sourceTree = "<group>"; };
@@ -127,11 +127,11 @@
 		D016D974471BC77E62628DB8EA4D7AD2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D16723667AF8BBDE8C72401B24E5272F /* Cosmos-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cosmos-umbrella.h"; sourceTree = "<group>"; };
 		D9099D8240292E0CB0516819834FC862 /* StarLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StarLayer.swift; path = Cosmos/StarLayer.swift; sourceTree = "<group>"; };
-		DC3A3ACDFD307BA07AB00BCAD57C08BF /* Cosmos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Cosmos.framework; path = Cosmos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC3A3ACDFD307BA07AB00BCAD57C08BF /* Cosmos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cosmos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E164F849FAE8B254F70CC065525D1DCE /* CosmosLayerHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosLayerHelper.swift; path = Cosmos/CosmosLayerHelper.swift; sourceTree = "<group>"; };
 		E29D3C0CF7E0E83FC6AA5EAEC185267F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E6FA9D13C71855E83F798830DE7D9103 /* CosmosSettings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosSettings.swift; path = Cosmos/CosmosSettings.swift; sourceTree = "<group>"; };
-		E7BEA0A086FCB2BC113B1384D8278445 /* nanopb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = nanopb.framework; path = nanopb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7BEA0A086FCB2BC113B1384D8278445 /* nanopb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = nanopb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBA0385BE91D11B366DBCA6E017463F5 /* RightToLeft.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RightToLeft.swift; path = Cosmos/Helpers/RightToLeft.swift; sourceTree = "<group>"; };
 		F0E0479CF29FFA603C54E8A53E416923 /* Pods-Peer Review-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Peer Review-acknowledgements.plist"; sourceTree = "<group>"; };
 		FA182F67543824165754834898DFC3D6 /* CosmosLocalizedRating.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosLocalizedRating.swift; path = Cosmos/CosmosLocalizedRating.swift; sourceTree = "<group>"; };
@@ -189,7 +189,6 @@
 			children = (
 				274292D1C93AC0FD486F72A19C3F69AF /* Frameworks */,
 			);
-			name = FirebaseCore;
 			path = FirebaseCore;
 			sourceTree = "<group>";
 		};
@@ -215,7 +214,6 @@
 				A5BBEE55D427344327066D18314E7B28 /* encode */,
 				9B1DC5025DCAC3ABC33D1B38839B5466 /* Support Files */,
 			);
-			name = nanopb;
 			path = nanopb;
 			sourceTree = "<group>";
 		};
@@ -270,7 +268,6 @@
 			children = (
 				51EDDFD0F1A7B4CD3724A0D2EF0DBFF4 /* Frameworks */,
 			);
-			name = FirebaseInstanceID;
 			path = FirebaseInstanceID;
 			sourceTree = "<group>";
 		};
@@ -352,7 +349,6 @@
 			children = (
 				CED80FBA34A852E2DC83D12EE4E4AF62 /* Frameworks */,
 			);
-			name = FirebaseAnalytics;
 			path = FirebaseAnalytics;
 			sourceTree = "<group>";
 		};
@@ -376,7 +372,6 @@
 				D9099D8240292E0CB0516819834FC862 /* StarLayer.swift */,
 				D64E247E5C18158940F8A0D52C415239 /* Support Files */,
 			);
-			name = Cosmos;
 			path = Cosmos;
 			sourceTree = "<group>";
 		};
@@ -422,7 +417,6 @@
 			children = (
 				B1EF9104DEDD07CDCA416476730215BB /* Core */,
 			);
-			name = Firebase;
 			path = Firebase;
 			sourceTree = "<group>";
 		};
@@ -444,7 +438,6 @@
 				8C378AADC238A8709A968C879E0486CF /* NSData+zlib */,
 				AEFB2E6D6E9DEE4AE27BC1874AEA01DD /* Support Files */,
 			);
-			name = GoogleToolboxForMac;
 			path = GoogleToolboxForMac;
 			sourceTree = "<group>";
 		};
@@ -570,7 +563,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0900;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -719,6 +712,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
