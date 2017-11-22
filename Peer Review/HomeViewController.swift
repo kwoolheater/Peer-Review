@@ -7,23 +7,22 @@
 //
 
 import UIKit
+import Cosmos
 
 class ViewController: UIViewController {
 
     // initialize outlets
     @IBOutlet weak var usernameLabel: UILabel!
-    @IBOutlet weak var firstStar: UIImageView!
-    @IBOutlet weak var secondStar: UIImageView!
-    @IBOutlet weak var thirdStar: UIImageView!
-    @IBOutlet weak var fourthStar: UIImageView!
-    @IBOutlet weak var fifthStar: UIImageView!
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var starView: CosmosView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        starView.rating = 4
+        ratingLabel.text = "4"
+        usernameLabel.text = "Kiyoshi Woolheater"
         
     }
     
