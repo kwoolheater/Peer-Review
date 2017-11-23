@@ -13,6 +13,7 @@
 		41678C451FC330D500446E36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41678C441FC330D500446E36 /* Assets.xcassets */; };
 		41678C481FC330D500446E36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41678C461FC330D500446E36 /* LaunchScreen.storyboard */; };
 		41678C501FC367A300446E36 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41678C4F1FC367A300446E36 /* CoreDataStack.swift */; };
+		41FA42BF1FC68676002186F3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41FA42BE1FC68676002186F3 /* GoogleService-Info.plist */; };
 		6C037621223C55B97DAA926C /* Pods_Peer_Review.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBD13A7A3AFD040D9287345D /* Pods_Peer_Review.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +27,7 @@
 		41678C471FC330D500446E36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		41678C491FC330D500446E36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41678C4F1FC367A300446E36 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
-		41FA42BB1FC68466002186F3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		41FA42BE1FC68676002186F3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D392A396A64691EBF231CB1C /* Pods-Peer Review.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Peer Review.release.xcconfig"; path = "Pods/Target Support Files/Pods-Peer Review/Pods-Peer Review.release.xcconfig"; sourceTree = "<group>"; };
 		FBD13A7A3AFD040D9287345D /* Pods_Peer_Review.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Peer_Review.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -70,8 +71,8 @@
 				41678C411FC330D500446E36 /* Main.storyboard */,
 				41678C441FC330D500446E36 /* Assets.xcassets */,
 				41678C461FC330D500446E36 /* LaunchScreen.storyboard */,
+				41FA42BE1FC68676002186F3 /* GoogleService-Info.plist */,
 				41678C491FC330D500446E36 /* Info.plist */,
-				41FA42BB1FC68466002186F3 /* GoogleService-Info.plist */,
 			);
 			path = "Peer Review";
 			sourceTree = "<group>";
@@ -156,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				41678C481FC330D500446E36 /* LaunchScreen.storyboard in Resources */,
+				41FA42BF1FC68676002186F3 /* GoogleService-Info.plist in Resources */,
 				41678C451FC330D500446E36 /* Assets.xcassets in Resources */,
 				41678C431FC330D500446E36 /* Main.storyboard in Resources */,
 			);
