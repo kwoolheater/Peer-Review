@@ -27,11 +27,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureAuth()
-        
-        starView.rating = 4
-        ratingLabel.text = "4"
-        usernameLabel.text = "Kiyoshi Woolheater"
-        
+        starView.rating = 0
+        ratingLabel.text = "No current rating"
+        usernameLabel.text = displayName
     }
     
     func configureAuth() {
@@ -44,7 +42,7 @@ class ViewController: UIViewController {
                     self.user = activeUser
                     self.signedInStatus(isSignedIn: true)
                     let name = user!.email!.components(separatedBy: "@")[0]
-                    self.displayName = name
+                    self.usernameLabel.text = self.user?.displayName
                 }
             } else {
                 // user must sign in
@@ -68,6 +66,4 @@ class ViewController: UIViewController {
         let authViewController = FUIAuth.defaultAuthUI()!.authViewController()
         present(authViewController, animated: true, completion: nil)
     }
-    
 }
-
