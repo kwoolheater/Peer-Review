@@ -5,6 +5,7 @@ target 'Peer Review' do
   use_frameworks!
   pod 'Cosmos', '~> 12.0'
   pod 'Firebase'
+  pod 'FirebaseUI'
   # Pods for Peer Review
 
 
