@@ -8,6 +8,7 @@
 
 import UIKit
 import Cosmos
+import Firebase
 
 class ViewController: UIViewController {
 
