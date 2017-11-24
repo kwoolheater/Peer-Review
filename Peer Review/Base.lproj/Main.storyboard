@@ -98,7 +98,7 @@
         <!--Item 2-->
         <scene sceneID="jMk-HW-mMK">
             <objects>
-                <viewController id="4OR-NZ-hu6" sceneMemberID="viewController">
+                <viewController id="4OR-NZ-hu6" customClass="SearchUserViewController" customModule="Peer_Review" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jn8-YZ-eBk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
