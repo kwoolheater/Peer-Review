@@ -9,7 +9,19 @@
 import Foundation
 import Firebase
 
-class SearchUserViewController: UIViewController {
+class SearchUserViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+    
+    // declare outlets
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
+        searchBar.delegate = self
+    }
     
     
     
