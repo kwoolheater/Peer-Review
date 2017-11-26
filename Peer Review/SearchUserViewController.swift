@@ -31,10 +31,6 @@ class SearchUserViewController: UIViewController {
     
     func configureDatabase() {
         ref = Database.database().reference()
-        _refHandle = ref.child("users").queryOrderedByKey() { (snapshot: DataSnapshot) in
-            self.dataArray?.append(snapshot)
-        }
-        print(dataArray)
     }
     
 }

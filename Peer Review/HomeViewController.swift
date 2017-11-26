@@ -32,6 +32,15 @@ class ViewController: UIViewController {
         usernameLabel.text = displayName
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        do {
+            try Auth.auth().signOut()
+        } catch {
+            print("unable to sign out: \(error)")
+        }
+    }
+    
     func configureAuth() {
         // listen for changes in the authorization state
         _authHandle = Auth.auth().addStateDidChangeListener { (auth: Auth, user: User?) in
