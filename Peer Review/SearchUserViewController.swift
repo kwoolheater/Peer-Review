@@ -37,7 +37,7 @@ class SearchUserViewController: UIViewController {
             for (_ , user) in value! {
                 let newUser = user as? NSDictionary
                 let email = newUser?["email"] as? String
-                namesArray?.append(email!)
+                self.namesArray?.append(email!)
             }
         })
     }
