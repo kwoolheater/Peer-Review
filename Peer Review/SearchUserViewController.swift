@@ -31,6 +31,11 @@ class SearchUserViewController: UIViewController {
     
     func configureDatabase() {
         ref = Database.database().reference()
+        // get data from children
+        ref.child("users").observeSingleEvent(of: .value, with: { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            print(value)
+        })
     }
     
 }
