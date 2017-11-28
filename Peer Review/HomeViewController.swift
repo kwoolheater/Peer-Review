@@ -58,7 +58,6 @@ class ViewController: UIViewController {
     
     func signedInStatus(isSignedIn: Bool) {
         if isSignedIn {
-            // remove background blur (will use when showing image messages)
         }
     }
     

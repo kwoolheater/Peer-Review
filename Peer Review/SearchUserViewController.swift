@@ -34,7 +34,11 @@ class SearchUserViewController: UIViewController {
         // get data from children
         ref.child("users").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
-            print(value)
+            for (_ , user) in value! {
+                let newUser = user as? NSDictionary
+                let email = newUser?["email"] as? String
+                namesArray?.append(email!)
+            }
         })
     }
     
