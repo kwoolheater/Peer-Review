@@ -7,9 +7,10 @@
 //
 
 import Foundation
+import UIKit
 import Firebase
 
-class SearchUserViewController: UIViewController {
+class SearchUserViewController: UIViewController, UITableViewDataSource, UISearchBarDelegate {
     
     // declare outlets
     @IBOutlet weak var tableView: UITableView!
@@ -18,13 +19,13 @@ class SearchUserViewController: UIViewController {
     // declare variables
     var ref: DatabaseReference!
     var dataArray: [DataSnapshot]! = []
-    var namesArray: [String]?
+    var namesArray: [String]! = []
     fileprivate var _refHandle: DatabaseHandle!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // tableView.delegate = self
-        // tableView.dataSource = self
+        tableView.delegate = self
+        tableView.dataSource = self
         // searchBar.delegate = self
         configureDatabase()
     }
@@ -40,6 +41,18 @@ class SearchUserViewController: UIViewController {
                 self.namesArray?.append(email!)
             }
         })
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return namesArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
     }
     
 }
