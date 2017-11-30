@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Firebase
 
-class SearchUserViewController: UIViewController, UITableViewDataSource, UISearchBarDelegate {
+class SearchUserViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     // declare outlets
     @IBOutlet weak var tableView: UITableView!
@@ -39,12 +39,16 @@ class SearchUserViewController: UIViewController, UITableViewDataSource, UISearc
                 let newUser = user as? NSDictionary
                 let email = newUser?["email"] as? String
                 self.namesArray?.append(email!)
+                self.tableView.reloadData()
             }
         })
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let email = namesArray[indexPath.row]
+        cell.textLabel?.text = email
+        return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
