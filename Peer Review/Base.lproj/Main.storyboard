@@ -150,7 +150,7 @@
                         <outlet property="searchBar" destination="Lvi-eX-9va" id="2Gd-8V-j2R"/>
                         <outlet property="searchDisplayController" destination="7iu-wU-yFJ" id="7GK-q8-m5T"/>
                         <outlet property="tableView" destination="VbY-Lb-lAf" id="Zy1-Om-flT"/>
-                        <segue destination="OyQ-Cc-iKb" kind="show" identifier="detailSegue" id="rZA-31-5qY"/>
+                        <segue destination="OyQ-Cc-iKb" kind="presentation" identifier="detailSegue" modalTransitionStyle="flipHorizontal" id="rZA-31-5qY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r6R-Pc-Fmw" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -57,5 +57,7 @@ class SearchUserViewController: UIViewController, UITableViewDataSource, UITable
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        performSegue(withIdentifier: "detailSegue", sender: self)
+        
     }
 }
