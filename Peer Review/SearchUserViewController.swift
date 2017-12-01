@@ -20,6 +20,7 @@ class SearchUserViewController: UIViewController, UITableViewDataSource, UITable
     var ref: DatabaseReference!
     var dataArray: [DataSnapshot]! = []
     var namesArray: [String]! = []
+    var uidArray: [String]! = []
     fileprivate var _refHandle: DatabaseHandle!
     
     override func viewDidLoad() {
@@ -38,7 +39,9 @@ class SearchUserViewController: UIViewController, UITableViewDataSource, UITable
             for (_ , user) in value! {
                 let newUser = user as? NSDictionary
                 let email = newUser?["email"] as? String
+                let uid = newUser?["uid"] as? String
                 self.namesArray?.append(email!)
+                self.uidArray?.append(uid!)
                 self.tableView.reloadData()
             }
         })
@@ -58,6 +61,6 @@ class SearchUserViewController: UIViewController, UITableViewDataSource, UITable
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         performSegue(withIdentifier: "detailSegue", sender: self)
-        
     }
+    
 }

@@ -11,7 +11,13 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
+    // declare variables
+    var email: String?
+    var uid: String?
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
     
     
     

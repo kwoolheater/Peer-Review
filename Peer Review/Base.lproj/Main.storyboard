@@ -173,16 +173,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HhR-Tw-ZCY">
-                                <rect key="frame" x="120" y="44" width="134" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HhR-Tw-ZCY">
+                                <rect key="frame" x="41" y="44" width="295" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KeW-CO-AXV" customClass="CosmosView" customModule="Cosmos">
-                                <rect key="frame" x="41" y="109" width="292" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KeW-CO-AXV" customClass="CosmosView" customModule="Cosmos">
+                                <rect key="frame" x="41" y="104" width="295" height="55"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="starSize">
@@ -199,8 +197,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5do-IM-pUg">
-                                <rect key="frame" x="41" y="198" width="292" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5do-IM-pUg">
+                                <rect key="frame" x="41" y="198" width="292" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="zuN-7F-xKg"/>
                                 </constraints>
@@ -208,13 +206,29 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xtQ-ct-mo1">
-                                <rect key="frame" x="161" y="286" width="53" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xtQ-ct-mo1">
+                                <rect key="frame" x="161" y="377" width="53" height="30"/>
                                 <state key="normal" title="Submit"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ry5-SN-gQL" firstAttribute="trailing" secondItem="xtQ-ct-mo1" secondAttribute="trailing" constant="161" id="041-RI-9cf"/>
+                            <constraint firstItem="5do-IM-pUg" firstAttribute="top" secondItem="KeW-CO-AXV" secondAttribute="bottom" constant="39" id="0Kh-D8-ukh"/>
+                            <constraint firstItem="5do-IM-pUg" firstAttribute="leading" secondItem="Ry5-SN-gQL" secondAttribute="leading" constant="41" id="3us-4t-duM"/>
+                            <constraint firstItem="Ry5-SN-gQL" firstAttribute="trailing" secondItem="HhR-Tw-ZCY" secondAttribute="trailing" constant="39" id="BtV-FF-2rX"/>
+                            <constraint firstItem="Ry5-SN-gQL" firstAttribute="trailing" secondItem="KeW-CO-AXV" secondAttribute="trailing" constant="39" id="EXE-x3-I4g"/>
+                            <constraint firstItem="xtQ-ct-mo1" firstAttribute="top" secondItem="5do-IM-pUg" secondAttribute="bottom" constant="29" id="LaF-0q-ZRD"/>
+                            <constraint firstItem="HhR-Tw-ZCY" firstAttribute="leading" secondItem="Ry5-SN-gQL" secondAttribute="leading" constant="41" id="NsA-Hf-0EI"/>
+                            <constraint firstItem="KeW-CO-AXV" firstAttribute="leading" secondItem="Ry5-SN-gQL" secondAttribute="leading" constant="41" id="OkK-Ga-ADs"/>
+                            <constraint firstItem="5do-IM-pUg" firstAttribute="top" secondItem="KeW-CO-AXV" secondAttribute="bottom" constant="39" id="RSe-Nx-gO4"/>
+                            <constraint firstItem="Ry5-SN-gQL" firstAttribute="bottom" secondItem="xtQ-ct-mo1" secondAttribute="bottom" constant="260" id="UdL-hh-ty3"/>
+                            <constraint firstItem="HhR-Tw-ZCY" firstAttribute="top" secondItem="Ry5-SN-gQL" secondAttribute="top" constant="24" id="XHM-XR-b5b"/>
+                            <constraint firstItem="xtQ-ct-mo1" firstAttribute="leading" secondItem="Ry5-SN-gQL" secondAttribute="leading" constant="161" id="Y0p-Se-nMS"/>
+                            <constraint firstItem="Ry5-SN-gQL" firstAttribute="trailing" secondItem="5do-IM-pUg" secondAttribute="trailing" constant="42" id="cLG-zp-Kfd"/>
+                            <constraint firstItem="xtQ-ct-mo1" firstAttribute="top" secondItem="5do-IM-pUg" secondAttribute="bottom" constant="29" id="lm7-aC-qIx"/>
+                            <constraint firstItem="KeW-CO-AXV" firstAttribute="top" secondItem="HhR-Tw-ZCY" secondAttribute="bottom" constant="30" id="n0o-Q2-eJK"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Ry5-SN-gQL"/>
                     </view>
                 </viewController>
