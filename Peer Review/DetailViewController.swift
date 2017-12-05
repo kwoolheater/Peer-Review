@@ -34,8 +34,7 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func pushRating(_ sender: Any) {
-        print(starView.rating)
-        self.ref.child("users").child(uid!).child("reviews").setValue(["stars": starView.rating])
+        self.ref.child("users").child(uid!).child("reviews").childByAutoId().setValue(["stars": starView.rating])
     }
     
     
