@@ -209,6 +209,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xtQ-ct-mo1">
                                 <rect key="frame" x="161" y="377" width="53" height="30"/>
                                 <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="pushRating:" destination="OyQ-Cc-iKb" eventType="touchUpInside" id="NJR-KF-8xV"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -231,6 +234,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ry5-SN-gQL"/>
                     </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="HhR-Tw-ZCY" id="8hQ-62-JqS"/>
+                        <outlet property="starView" destination="KeW-CO-AXV" id="dXl-2e-H2R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H3e-Hd-zGM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

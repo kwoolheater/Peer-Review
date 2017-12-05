@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import Firebase
+import Cosmos
 
 class DetailViewController: UIViewController {
     
@@ -15,11 +17,20 @@ class DetailViewController: UIViewController {
     var email: String?
     var uid: String?
     
+    // declare outlets
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var starView: CosmosView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        // set name label
+        nameLabel.text = email
     }
     
-    
+    @IBAction func pushRating(_ sender: Any) {
+        print(starView.rating)
+        
+    }
     
     
 }

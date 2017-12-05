@@ -21,6 +21,8 @@ class SearchUserViewController: UIViewController, UITableViewDataSource, UITable
     var dataArray: [DataSnapshot]! = []
     var namesArray: [String]! = []
     var uidArray: [String]! = []
+    var sentUid: String?
+    var sentEmail: String?
     fileprivate var _refHandle: DatabaseHandle!
     
     override func viewDidLoad() {
@@ -59,8 +61,17 @@ class SearchUserViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        sentEmail = namesArray[indexPath.row]
+        sentUid = uidArray[indexPath.row]
         
         performSegue(withIdentifier: "detailSegue", sender: self)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detailSegue" {
+            let segue = segue.destination as! DetailViewController
+            segue.uid = sentUid
+            segue.email = sentEmail
+        }
+    }
 }
