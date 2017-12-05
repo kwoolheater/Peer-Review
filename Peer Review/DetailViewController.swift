@@ -16,6 +16,7 @@ class DetailViewController: UIViewController {
     // declare variables
     var email: String?
     var uid: String?
+    var ref: DatabaseReference!
     
     // declare outlets
     @IBOutlet weak var nameLabel: UILabel!
@@ -24,12 +25,17 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // set name label
+        configureDatabase()
         nameLabel.text = email
+    }
+    
+    func configureDatabase() {
+        ref = Database.database().reference()
     }
     
     @IBAction func pushRating(_ sender: Any) {
         print(starView.rating)
-        
+        self.ref.child("users").child(uid!).child("reviews").setValue(["stars": starView.rating])
     }
     
     
