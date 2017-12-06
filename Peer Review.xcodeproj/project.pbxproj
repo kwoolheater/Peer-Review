@@ -14,6 +14,7 @@
 		41678C481FC330D500446E36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41678C461FC330D500446E36 /* LaunchScreen.storyboard */; };
 		41678C501FC367A300446E36 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41678C4F1FC367A300446E36 /* CoreDataStack.swift */; };
 		417D7D8B1FD0A782006CFB43 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417D7D8A1FD0A782006CFB43 /* DetailViewController.swift */; };
+		41DD33AE1FD72DC2000F422B /* SavedItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DD33AD1FD72DC2000F422B /* SavedItems.swift */; };
 		41FA42BF1FC68676002186F3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41FA42BE1FC68676002186F3 /* GoogleService-Info.plist */; };
 		41FA42C11FC77D52002186F3 /* SearchUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FA42C01FC77D52002186F3 /* SearchUserViewController.swift */; };
 		6C037621223C55B97DAA926C /* Pods_Peer_Review.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBD13A7A3AFD040D9287345D /* Pods_Peer_Review.framework */; };
@@ -30,6 +31,7 @@
 		41678C491FC330D500446E36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41678C4F1FC367A300446E36 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		417D7D8A1FD0A782006CFB43 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		41DD33AD1FD72DC2000F422B /* SavedItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedItems.swift; sourceTree = "<group>"; };
 		41FA42BE1FC68676002186F3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		41FA42C01FC77D52002186F3 /* SearchUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserViewController.swift; sourceTree = "<group>"; };
 		D392A396A64691EBF231CB1C /* Pods-Peer Review.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Peer Review.release.xcconfig"; path = "Pods/Target Support Files/Pods-Peer Review/Pods-Peer Review.release.xcconfig"; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				41678C3F1FC330D500446E36 /* HomeViewController.swift */,
 				41FA42C01FC77D52002186F3 /* SearchUserViewController.swift */,
 				417D7D8A1FD0A782006CFB43 /* DetailViewController.swift */,
+				41DD33AD1FD72DC2000F422B /* SavedItems.swift */,
 				41678C411FC330D500446E36 /* Main.storyboard */,
 				41678C441FC330D500446E36 /* Assets.xcassets */,
 				41678C461FC330D500446E36 /* LaunchScreen.storyboard */,
@@ -274,6 +277,7 @@
 				41FA42C11FC77D52002186F3 /* SearchUserViewController.swift in Sources */,
 				417D7D8B1FD0A782006CFB43 /* DetailViewController.swift in Sources */,
 				41678C401FC330D500446E36 /* HomeViewController.swift in Sources */,
+				41DD33AE1FD72DC2000F422B /* SavedItems.swift in Sources */,
 				41678C3E1FC330D500446E36 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,7 +18,6 @@ class SearchUserViewController: UIViewController, UITableViewDataSource, UITable
     
     // declare variables
     var ref: DatabaseReference!
-    var dataArray: [DataSnapshot]! = []
     var namesArray: [String]! = []
     var uidArray: [String]! = []
     var sentUid: String?

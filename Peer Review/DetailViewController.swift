@@ -21,6 +21,7 @@ class DetailViewController: UIViewController {
     // declare outlets
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var starView: CosmosView!
+    @IBOutlet weak var textView: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,10 +32,20 @@ class DetailViewController: UIViewController {
     
     func configureDatabase() {
         ref = Database.database().reference()
+        
     }
     
     @IBAction func pushRating(_ sender: Any) {
-        self.ref.child("users").child(uid!).child("reviews").childByAutoId().setValue(["stars": starView.rating])
+        if textView.text == nil {
+            self.ref.child("users").child(uid!).child("reviews").childByAutoId().setValue(["stars": starView.rating,
+                                                                                           "poster": SavedItems.sharedInstance().user?.email])
+            dismiss(animated: true, completion: nil)
+        } else {
+            self.ref.child("users").child(uid!).child("reviews").childByAutoId().setValue(["stars": starView.rating,
+                                                                                           "poster": SavedItems.sharedInstance().user?.email,
+                                                                                           "message": textView.text])
+            dismiss(animated: true, completion: nil)
+        }
     }
     
     
