@@ -23,12 +23,18 @@ class SearchUserViewController: UIViewController, UITableViewDataSource, UITable
     var sentUid: String?
     var sentEmail: String?
     fileprivate var _refHandle: DatabaseHandle!
+    let searchController = UISearchController(searchResultsController: nil)
+    var filteredNamesArray = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        // searchBar.delegate = self
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search user emails"
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
         configureDatabase()
     }
     
@@ -50,12 +56,21 @@ class SearchUserViewController: UIViewController, UITableViewDataSource, UITable
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let email = namesArray[indexPath.row]
+        let email: String
+        if isFiltering() {
+            email = filteredNamesArray[indexPath.row]
+        } else {
+            email = namesArray[indexPath.row]
+        }
         cell.textLabel?.text = email
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if isFiltering() {
+            return filteredNamesArray.count
+        }
+        
         return namesArray.count
     }
     
@@ -73,4 +88,30 @@ class SearchUserViewController: UIViewController, UITableViewDataSource, UITable
             segue.email = sentEmail
         }
     }
+    
+    func searchBarIsEmpty() -> Bool {
+        // Returns true if the text is empty or nil
+        return searchController.searchBar.text?.isEmpty ?? true
+    }
+    
+    func filterContentForSearchText(_ searchText: String, scope: String = "All") {
+        filteredNamesArray = namesArray.filter({( name : String) -> Bool in
+            return name.lowercased().contains(searchText.lowercased())
+        })
+        
+        tableView.reloadData()
+    }
+    
+    func isFiltering() -> Bool {
+        return searchController.isActive && !searchBarIsEmpty()
+    }
+    
+    
+}
+
+extension SearchUserViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchController.searchBar.text!)
+    }
+    
 }
