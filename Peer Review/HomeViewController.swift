@@ -6,12 +6,13 @@
 //  Copyright © 2017 Kiyoshi Woolheater. All rights reserved.
 //
 
+import Foundation
 import UIKit
 import Cosmos
 import Firebase
 import FirebaseAuthUI
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     // initialize outlets
     @IBOutlet weak var usernameLabel: UILabel!
@@ -35,6 +36,8 @@ class ViewController: UIViewController {
         starView.rating = 0
         ratingLabel.text = "No current rating"
         usernameLabel.text = displayName
+        tableView.delegate = self
+        tableView.dataSource = self
     }
     
     func configureAuth() {
@@ -75,9 +78,14 @@ class ViewController: UIViewController {
     
     func getRatings() {
         ref.child("users").child(userUid!).child("reviews").observeSingleEvent(of: .value, with: { (snapshot) in
-            let response = snapshot.value as? NSDictionary
+            guard let response = snapshot.value as? NSDictionary else {
+                print("No reviews.")
+                return
+            }
             
-            for (key, value) in response! {
+            // TODO: add if stantment to fix bug
+            
+            for (key, value) in response {
                 let postInfo = value as? NSDictionary
                 let rating = postInfo!["stars"] as? Double
                 let message = postInfo!["message"] as? String
@@ -99,6 +107,8 @@ class ViewController: UIViewController {
             
             self.starView.rating = (overallRating)
             self.ratingLabel.text = "\(overallRating)"
+            
+            self.tableView.reloadData()
         })
     }
     
@@ -115,5 +125,19 @@ class ViewController: UIViewController {
         let authViewController = FUIAuth.defaultAuthUI()!.authViewController()
         present(authViewController, animated: true, completion: nil)
     }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if messageArray == nil {
+            return 0
+        } else {
+            return messageArray.count
+        }
+    }
 
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "messageCell", for: indexPath)
+        let message = messageArray[indexPath.row]
+        cell.textLabel?.text = message
+        return cell
+    }
 }
