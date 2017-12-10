@@ -38,6 +38,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         usernameLabel.text = displayName
         tableView.delegate = self
         tableView.dataSource = self
+        //let button = UIBarButtonItem(title: Sign In, style: .plain, target: self, action: )
+        //navigationController?.navigationItem.setRightBarButtonItems(button, animated: true)
     }
     
     func configureAuth() {
@@ -117,7 +119,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func signedInStatus(isSignedIn: Bool) {
+        
         if isSignedIn {
+            
         }
     }
     
