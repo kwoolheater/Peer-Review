@@ -108,9 +108,14 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="Ak7-m5-3xp" userLabel="Profile"/>
                     <navigationItem key="navigationItem" id="ZxZ-Ij-uQB">
-                        <barButtonItem key="rightBarButtonItem" title="Sign Out" id="nrZ-NW-P79"/>
+                        <barButtonItem key="rightBarButtonItem" title="Sign Out" id="nrZ-NW-P79">
+                            <connections>
+                                <action selector="authButton:" destination="BYZ-38-t0r" id="doc-eT-FC3"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="authButton" destination="nrZ-NW-P79" id="Tng-SV-FUu"/>
                         <outlet property="ratingLabel" destination="MTR-eN-IY3" id="ism-jS-h5R"/>
                         <outlet property="starView" destination="yPl-LY-6qC" id="vKF-si-cPH"/>
                         <outlet property="tableView" destination="RbK-nX-iHR" id="9V5-vG-hq5"/>
@@ -185,9 +190,14 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="mL0-K3-zTf" userLabel="Reviews"/>
                     <navigationItem key="navigationItem" id="cW2-7p-Sf8">
-                        <barButtonItem key="rightBarButtonItem" title="Sign Out" id="ehy-zU-rGY" userLabel="Sign Out"/>
+                        <barButtonItem key="rightBarButtonItem" title="Sign Out" id="ehy-zU-rGY" userLabel="Sign Out">
+                            <connections>
+                                <action selector="authButton:" destination="4OR-NZ-hu6" id="1R5-dd-UHT"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="authButton" destination="ehy-zU-rGY" id="wuz-dE-N1P"/>
                         <outlet property="searchDisplayController" destination="7iu-wU-yFJ" id="7GK-q8-m5T"/>
                         <outlet property="tableView" destination="VbY-Lb-lAf" id="Zy1-Om-flT"/>
                         <segue destination="OyQ-Cc-iKb" kind="show" identifier="detailSegue" id="rZA-31-5qY"/>

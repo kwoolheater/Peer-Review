@@ -13,6 +13,7 @@ class SavedItems: NSObject {
     
     // Save user
     var user: User?
+    var signedIn: Bool?
     
     // create a shared instance
     class func sharedInstance() -> SavedItems {

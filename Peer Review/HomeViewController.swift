@@ -19,6 +19,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var starView: CosmosView!
+    @IBOutlet weak var authButton: UIBarButtonItem!
     
     // declare variables
     fileprivate var _authHandle: AuthStateDidChangeListenerHandle!
@@ -117,15 +118,41 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func signedInStatus(isSignedIn: Bool) {
+        SavedItems.sharedInstance().signedIn = isSignedIn
         
         if isSignedIn {
-            
+            signedIn()
+        } else {
+            signedOut()
         }
     }
     
     func loginSession() {
         let authViewController = FUIAuth.defaultAuthUI()!.authViewController()
         present(authViewController, animated: true, completion: nil)
+    }
+    
+    func signedIn() {
+        authButton.title = "Sign Out"
+    }
+    
+    func signedOut() {
+        authButton.title = "Sign In"
+    }
+    
+    @IBAction func authButton(_ sender: Any) {
+        
+        if SavedItems.sharedInstance().signedIn == false {
+            configureAuth()
+        } else {
+            do {
+                try Auth.auth().signOut()
+            } catch {
+                print("error signing out")
+            }
+            signedInStatus(isSignedIn: false)
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
