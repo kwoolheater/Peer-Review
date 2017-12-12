@@ -89,7 +89,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 let message = postInfo!["message"] as? String
                 
                 self.ratingsArray.append(rating!)
-                if message != nil {
+                if message != "" {
                     self.messageArray.append(message!)
                 }
             }
@@ -103,7 +103,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
             let overallRating = sum/count
             let roundedRating = String(format: "%.2f", overallRating)
-            print(roundedRating)
             
             self.starView.rating = (overallRating)
             self.ratingLabel.text = "\(roundedRating)"
