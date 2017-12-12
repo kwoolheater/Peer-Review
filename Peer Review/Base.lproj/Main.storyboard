@@ -106,7 +106,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Ak7-m5-3xp" userLabel="Profile"/>
+                    <tabBarItem key="tabBarItem" title="Profile" id="Ak7-m5-3xp" userLabel="Profile"/>
                     <navigationItem key="navigationItem" id="ZxZ-Ij-uQB">
                         <barButtonItem key="rightBarButtonItem" title="Sign Out" id="nrZ-NW-P79">
                             <connections>
@@ -143,7 +143,7 @@
             </objects>
             <point key="canvasLocation" x="89" y="493"/>
         </scene>
-        <!--Item 2-->
+        <!--Reviews-->
         <scene sceneID="jMk-HW-mMK">
             <objects>
                 <viewController id="4OR-NZ-hu6" customClass="SearchUserViewController" customModule="Peer_Review" customModuleProvider="target" sceneMemberID="viewController">
@@ -188,7 +188,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7xV-mu-ogY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="mL0-K3-zTf" userLabel="Reviews"/>
+                    <tabBarItem key="tabBarItem" title="Reviews" id="mL0-K3-zTf" userLabel="Reviews"/>
                     <navigationItem key="navigationItem" id="cW2-7p-Sf8">
                         <barButtonItem key="rightBarButtonItem" title="Sign Out" id="ehy-zU-rGY" userLabel="Sign Out">
                             <connections>

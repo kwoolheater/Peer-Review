@@ -33,7 +33,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         configureAuth()
-        configureDatabase()
         starView.rating = 0
         ratingLabel.text = "No current rating"
         usernameLabel.text = displayName
@@ -84,8 +83,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 return
             }
             
-            // TODO: add if stantment to fix bug
-            
             for (key, value) in response {
                 let postInfo = value as? NSDictionary
                 let rating = postInfo!["stars"] as? Double
@@ -105,9 +102,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
             
             let overallRating = sum/count
+            let roundedRating = String(format: "%.2f", overallRating)
+            print(roundedRating)
             
             self.starView.rating = (overallRating)
-            self.ratingLabel.text = "\(overallRating)"
+            self.ratingLabel.text = "\(roundedRating)"
             
             self.tableView.reloadData()
         })
@@ -122,6 +121,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         if isSignedIn {
             signedIn()
+            configureDatabase()
         } else {
             signedOut()
         }
