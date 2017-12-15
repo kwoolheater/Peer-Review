@@ -73,7 +73,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 if email == self.user?.email {
                     self.userUid = newUser?["uid"] as? String
                     self.getRatings()
-                    // self.addReference()
                 }
             }
         })
@@ -113,12 +112,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             self.tableView.reloadData()
         })
     }
-    
-    /* func addReference() {
-        _refHandle = ref.child("users").child(userUid!).child("reviews").observe(.childAdded) { (snapshot: DataSnapshot) in
-            self.configureDatabase()
-        }
-    } */
     
     deinit {
         Auth.auth().removeStateDidChangeListener(_authHandle)
@@ -160,7 +153,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 print("error signing out")
             }
             // clear tableview
-            // self.tableView.
+            self.messageArray.removeAll()
+            self.tableView.reloadData()
             signedInStatus(isSignedIn: false)
         }
         
@@ -189,6 +183,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }()
     
     @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
+        self.messageArray.removeAll()
         configureDatabase()
         refreshControl.endRefreshing()
     }
