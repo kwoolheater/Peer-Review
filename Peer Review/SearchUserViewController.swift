@@ -32,6 +32,7 @@ class SearchUserViewController: UIViewController, UITableViewDataSource, UITable
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.addSubview(self.refreshControl)
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search user emails"
@@ -170,6 +171,19 @@ class SearchUserViewController: UIViewController, UITableViewDataSource, UITable
         return searchController.isActive && !searchBarIsEmpty()
     }
     
+    lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(ViewController.handleRefresh(_:)), for: UIControlEvents.valueChanged)
+        
+        return refreshControl
+    }()
+    
+    @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
+        self.namesArray.removeAll()
+        self.uidArray.removeAll()
+        configureDatabase()
+        refreshControl.endRefreshing()
+    }
     
 }
 
