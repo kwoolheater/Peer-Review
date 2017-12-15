@@ -23,6 +23,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // declare variables
     fileprivate var _authHandle: AuthStateDidChangeListenerHandle!
+    fileprivate var _refHandle: DatabaseHandle!
     var user: User?
     var displayName = "Anonymous"
     var ref: DatabaseReference!
@@ -38,6 +39,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         usernameLabel.text = displayName
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.addSubview(self.refreshControl)
     }
     
     func configureAuth() {
@@ -71,6 +73,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 if email == self.user?.email {
                     self.userUid = newUser?["uid"] as? String
                     self.getRatings()
+                    // self.addReference()
                 }
             }
         })
@@ -83,7 +86,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 return
             }
             
-            for (key, value) in response {
+            for (_, value) in response {
                 let postInfo = value as? NSDictionary
                 let rating = postInfo!["stars"] as? Double
                 let message = postInfo!["message"] as? String
@@ -111,8 +114,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         })
     }
     
+    /* func addReference() {
+        _refHandle = ref.child("users").child(userUid!).child("reviews").observe(.childAdded) { (snapshot: DataSnapshot) in
+            self.configureDatabase()
+        }
+    } */
+    
     deinit {
         Auth.auth().removeStateDidChangeListener(_authHandle)
+        ref.child("users").child(userUid!).child("reviews").removeObserver(withHandle: _refHandle)
     }
     
     func signedInStatus(isSignedIn: Bool) {
@@ -149,6 +159,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             } catch {
                 print("error signing out")
             }
+            // clear tableview
+            // self.tableView.
             signedInStatus(isSignedIn: false)
         }
         
@@ -167,5 +179,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let message = messageArray[indexPath.row]
         cell.textLabel?.text = message
         return cell
+    }
+    
+    lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(ViewController.handleRefresh(_:)), for: UIControlEvents.valueChanged)
+        
+        return refreshControl
+    }()
+    
+    @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
+        configureDatabase()
+        refreshControl.endRefreshing()
     }
 }

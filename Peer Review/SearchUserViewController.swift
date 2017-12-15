@@ -15,7 +15,6 @@ class SearchUserViewController: UIViewController, UITableViewDataSource, UITable
     
     // declare outlets
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var authButton: UIBarButtonItem!
     
     // declare variables
