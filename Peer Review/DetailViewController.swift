@@ -8,8 +8,9 @@
 
 import Foundation
 import UIKit
-import Firebase
 import Cosmos
+import Firebase
+import FirebaseDatabase
 
 class DetailViewController: UIViewController {
     

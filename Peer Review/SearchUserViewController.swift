@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import Firebase
 import FirebaseAuthUI
+import FirebaseDatabase
 
 class SearchUserViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     

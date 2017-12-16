@@ -11,6 +11,7 @@ import UIKit
 import Cosmos
 import Firebase
 import FirebaseAuthUI
+import FirebaseDatabase
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
