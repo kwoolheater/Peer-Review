@@ -47,12 +47,14 @@ class DetailViewController: UIViewController {
         if textView.text == nil {
             self.ref.child("users").child(uid!).child("reviews").childByAutoId().setValue(["stars": starView.rating,
                                                                                            "poster": SavedItems.sharedInstance().user?.email])
-            dismiss(animated: true, completion: nil)
+            navigationController?.popViewController(animated: true)
+            self.dismiss(animated: true, completion: nil)
         } else {
             self.ref.child("users").child(uid!).child("reviews").childByAutoId().setValue(["stars": starView.rating,
                                                                                            "poster": SavedItems.sharedInstance().user?.email,
                                                                                            "message": textView.text])
-            dismiss(animated: true, completion: nil)
+            navigationController?.popViewController(animated: true)
+            self.dismiss(animated: true, completion: nil)
         }
     }
     
