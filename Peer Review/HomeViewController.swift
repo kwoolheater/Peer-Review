@@ -156,6 +156,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             // clear tableview
             self.messageArray.removeAll()
             self.tableView.reloadData()
+            self.starView.rating = 0
+            self.usernameLabel.text = "Sign In!"
+            self.ratingLabel.text = "0.0"
             signedInStatus(isSignedIn: false)
         }
         

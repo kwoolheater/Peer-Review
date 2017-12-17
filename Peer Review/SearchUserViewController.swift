@@ -42,6 +42,14 @@ class SearchUserViewController: UIViewController, UITableViewDataSource, UITable
         configureDatabase()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        if SavedItems.sharedInstance().signedIn == false {
+            self.authButton.title = "Sign In"
+            configureAuth()
+        } 
+    }
+    
     func configureDatabase() {
         ref = Database.database().reference()
         // get data from children
@@ -115,6 +123,9 @@ class SearchUserViewController: UIViewController, UITableViewDataSource, UITable
             } catch {
                 print("error signing out")
             }
+            namesArray.removeAll()
+            uidArray.removeAll()
+            tableView.reloadData()
             signedInStatus(isSignedIn: false)
         }
         
