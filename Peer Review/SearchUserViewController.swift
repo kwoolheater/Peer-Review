@@ -47,7 +47,7 @@ class SearchUserViewController: UIViewController, UITableViewDataSource, UITable
         if SavedItems.sharedInstance().signedIn == false {
             self.authButton.title = "Sign In"
             configureAuth()
-        } 
+        }
     }
     
     func configureDatabase() {
