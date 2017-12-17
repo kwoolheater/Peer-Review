@@ -22,17 +22,24 @@ class DetailViewController: UIViewController {
     // declare outlets
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var starView: CosmosView!
-    @IBOutlet weak var textView: UITextField!
+    @IBOutlet weak var textView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // set name label
         configureDatabase()
         nameLabel.text = email
+        addTextViewBorder()
     }
     
     func configureDatabase() {
         ref = Database.database().reference()
+        
+    }
+    
+    func addTextViewBorder() {
+        self.textView.layer.borderWidth = 0.5
+        self.textView.layer.borderColor = UIColor.lightGray.cgColor
         
     }
     

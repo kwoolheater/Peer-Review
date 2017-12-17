@@ -291,6 +291,7 @@
                     <connections>
                         <outlet property="nameLabel" destination="HhR-Tw-ZCY" id="8hQ-62-JqS"/>
                         <outlet property="starView" destination="KeW-CO-AXV" id="dXl-2e-H2R"/>
+                        <outlet property="textView" destination="Wky-OO-488" id="41e-fo-0QP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H3e-Hd-zGM" userLabel="First Responder" sceneMemberID="firstResponder"/>
