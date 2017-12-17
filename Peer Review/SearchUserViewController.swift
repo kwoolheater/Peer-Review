@@ -59,9 +59,11 @@ class SearchUserViewController: UIViewController, UITableViewDataSource, UITable
                 let newUser = user as? NSDictionary
                 let email = newUser?["email"] as? String
                 let uid = newUser?["uid"] as? String
-                self.namesArray?.append(email!)
-                self.uidArray?.append(uid!)
-                self.tableView.reloadData()
+                if email != SavedItems.sharedInstance().user?.email {
+                    self.namesArray?.append(email!)
+                    self.uidArray?.append(uid!)
+                    self.tableView.reloadData()
+                }
             }
         })
     }
