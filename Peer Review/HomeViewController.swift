@@ -155,6 +155,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
             // clear tableview
             self.messageArray.removeAll()
+            self.ratingsArray.removeAll()
             self.tableView.reloadData()
             self.starView.rating = 0
             self.usernameLabel.text = "Sign In!"
@@ -188,7 +189,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
         self.messageArray.removeAll()
-        configureDatabase()
+        self.ratingsArray.removeAll()
+        getRatings()
         refreshControl.endRefreshing()
     }
 }
