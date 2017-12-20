@@ -36,7 +36,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         configureAuth()
         starView.rating = 0
-        ratingLabel.text = "No current rating"
+        ratingLabel.text = "Rating: No current rating"
         usernameLabel.text = displayName
         tableView.delegate = self
         tableView.dataSource = self
@@ -108,7 +108,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let roundedRating = String(format: "%.2f", overallRating)
             
             self.starView.rating = (overallRating)
-            self.ratingLabel.text = "\(roundedRating)"
+            self.ratingLabel.text = "Rating: \(roundedRating)"
             
             self.tableView.reloadData()
         })
@@ -158,7 +158,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             self.tableView.reloadData()
             self.starView.rating = 0
             self.usernameLabel.text = "Sign In!"
-            self.ratingLabel.text = "0.0"
+            self.ratingLabel.text = "Rating: 0.0"
             signedInStatus(isSignedIn: false)
         }
         
