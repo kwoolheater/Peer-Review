@@ -9,14 +9,12 @@
 import Foundation
 import UIKit
 import Firebase
-import FirebaseAuthUI
 import FirebaseDatabase
 
 class SearchUserViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     // declare outlets
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var authButton: UIBarButtonItem!
     
     // declare variables
     var ref: DatabaseReference!
@@ -26,11 +24,24 @@ class SearchUserViewController: UIViewController, UITableViewDataSource, UITable
     var sentEmail: String?
     let searchController = UISearchController(searchResultsController: nil)
     var filteredNamesArray = [String]()
-    fileprivate var _authHandle: AuthStateDidChangeListenerHandle!
     var user: User?
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        configureUI()
+        if SavedItems.sharedInstance().signedIn == true {
+            configureDatabase()
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        
+        namesArray.removeAll()
+        uidArray.removeAll()
+        tableView.reloadData()
+    }
+    
+    func configureUI() {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.addSubview(self.refreshControl)
@@ -39,15 +50,6 @@ class SearchUserViewController: UIViewController, UITableViewDataSource, UITable
         searchController.searchBar.placeholder = "Search user emails"
         navigationItem.searchController = searchController
         definesPresentationContext = true
-        configureDatabase()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        if SavedItems.sharedInstance().signedIn == false {
-            self.authButton.title = "Sign In"
-            configureAuth()
-        }
     }
     
     func configureDatabase() {
@@ -66,71 +68,6 @@ class SearchUserViewController: UIViewController, UITableViewDataSource, UITable
                 }
             }
         })
-    }
-    
-    func configureAuth() {
-        // listen for changes in the authorization state
-        _authHandle = Auth.auth().addStateDidChangeListener { (auth: Auth, user: User?) in
-            // check if there is a current user
-            if let activeUser = user {
-                // check if the current app user is the current FIRUser
-                if self.user != activeUser {
-                    self.user = activeUser
-                    self.signedInStatus(isSignedIn: true)
-                    let name = user!.email!.components(separatedBy: "@")[0]
-                    SavedItems.sharedInstance().user = self.user
-                }
-            } else {
-                // user must sign in
-                self.signedInStatus(isSignedIn: false)
-                self.loginSession()
-            }
-        }
-    }
-    
-    deinit {
-        Auth.auth().removeStateDidChangeListener(_authHandle)
-    }
-    
-    func signedInStatus(isSignedIn: Bool) {
-        SavedItems.sharedInstance().signedIn = isSignedIn
-        
-        if isSignedIn {
-            signedIn()
-        } else {
-            signedOut()
-        }
-    }
-    
-    func loginSession() {
-        let authViewController = FUIAuth.defaultAuthUI()!.authViewController()
-        present(authViewController, animated: true, completion: nil)
-    }
-    
-    func signedIn() {
-        authButton.title = "Sign Out"
-    }
-    
-    func signedOut() {
-        authButton.title = "Sign In"
-    }
-    
-    @IBAction func authButton(_ sender: Any) {
-        
-        if SavedItems.sharedInstance().signedIn == false {
-            configureAuth()
-        } else {
-            do {
-                try Auth.auth().signOut()
-            } catch {
-                print("error signing out")
-            }
-            namesArray.removeAll()
-            uidArray.removeAll()
-            tableView.reloadData()
-            signedInStatus(isSignedIn: false)
-        }
-        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
