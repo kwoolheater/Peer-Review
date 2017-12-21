@@ -35,7 +35,6 @@ class SearchUserViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        
         namesArray.removeAll()
         uidArray.removeAll()
         tableView.reloadData()
