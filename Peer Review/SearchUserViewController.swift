@@ -25,6 +25,9 @@ class SearchUserViewController: UIViewController, UITableViewDataSource, UITable
     let searchController = UISearchController(searchResultsController: nil)
     var filteredNamesArray = [String]()
     var user: User?
+    private let image = UIImage(named: "profile-big")!.withRenderingMode(.alwaysTemplate)
+    private let topMessage = "Login"
+    private let bottomMessage = "You need to login to access the user rating system. Return to the Profile screen."
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -49,6 +52,8 @@ class SearchUserViewController: UIViewController, UITableViewDataSource, UITable
         searchController.searchBar.placeholder = "Search user emails"
         navigationItem.searchController = searchController
         definesPresentationContext = true
+        let emptyBackgroundView = EmptyBackgroundView(image: image, top: topMessage, bottom: bottomMessage)
+        tableView.backgroundView = emptyBackgroundView
     }
     
     func configureDatabase() {
@@ -82,6 +87,14 @@ class SearchUserViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if namesArray.count == 0 {
+            tableView.separatorStyle = .none
+            tableView.backgroundView?.isHidden = false
+        } else {
+            tableView.separatorStyle = .singleLine
+            tableView.backgroundView?.isHidden = true
+        }
+        
         if isFiltering() {
             return filteredNamesArray.count
         }

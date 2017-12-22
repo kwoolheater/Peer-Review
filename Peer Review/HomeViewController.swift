@@ -31,6 +31,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var userUid: String?
     var messageArray: [String] = []
     var ratingsArray: [Double] = []
+    private let image = UIImage(named: "star-big")!.withRenderingMode(.alwaysTemplate)
+    private let topMessage = "No Ratings"
+    private let bottomMessage = "Interact with other Peer Review users to get ratings."
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +44,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.delegate = self
         tableView.dataSource = self
         tableView.addSubview(self.refreshControl)
+        let emptyBackgroundView = EmptyBackgroundView(image: image, top: topMessage, bottom: bottomMessage)
+        tableView.backgroundView = emptyBackgroundView
     }
     
     func configureAuth() {
@@ -167,8 +172,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if messageArray == nil {
+            tableView.separatorStyle = .none
+            tableView.backgroundView?.isHidden = false
             return 0
+        } else if messageArray.count == 0 {
+            tableView.separatorStyle = .none
+            tableView.backgroundView?.isHidden = false
+            return messageArray.count
         } else {
+            tableView.separatorStyle = .singleLine
+            tableView.backgroundView?.isHidden = true
             return messageArray.count
         }
     }

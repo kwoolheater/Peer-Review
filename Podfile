@@ -6,6 +6,7 @@ target 'Peer Review' do
   pod 'Cosmos', '~> 12.0'
   pod 'Firebase'
   pod 'FirebaseUI'
+  pod 'PureLayout'
   # Pods for Peer Review
 
 
