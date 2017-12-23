@@ -23,6 +23,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var starView: CosmosView!
     @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,11 +31,13 @@ class DetailViewController: UIViewController {
         configureDatabase()
         nameLabel.text = email
         addTextViewBorder()
+       // NotificationCenter.default.addObserver(self, selector: #selector(DetailViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+      //  NotificationCenter.default.addObserver(self, selector: #selector(DetailViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        self.hideKeyboardWhenTappedAround()
     }
     
     func configureDatabase() {
         ref = Database.database().reference()
-        
     }
     
     func addTextViewBorder() {
@@ -57,6 +60,30 @@ class DetailViewController: UIViewController {
             self.dismiss(animated: true, completion: nil)
         }
     }
+    /*
+    @objc func keyboardWillShow(notification: NSNotification) {
+        adjustingHeight(show: true, notification: notification)
+    }
     
+    @objc func keyboardWillHide(notification: NSNotification) {
+        adjustingHeight(show: false, notification: notification)
+    }
+    
+    
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
+    */
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
     
 }
