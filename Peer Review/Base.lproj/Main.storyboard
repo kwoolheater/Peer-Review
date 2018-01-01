@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="307" width="414" height="380"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="messageCell" textLabel="985-Jj-7me" style="IBUITableViewCellStyleDefault" id="IOp-sL-vBZ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="messageCell" textLabel="985-Jj-7me" style="IBUITableViewCellStyleDefault" id="IOp-sL-vBZ">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IOp-sL-vBZ" id="Wll-00-6T8">
@@ -255,10 +255,10 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ycc-sX-mM1">
-                                        <rect key="frame" x="19.666666666666657" y="103.33333333333334" width="375" height="63"/>
+                                        <rect key="frame" x="59" y="103.33333333333334" width="296" height="63"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leave a constructive explanation on how this co-worker can improve in the next quarter." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ali-hw-3GO">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="63"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="296" height="63"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="63" id="0yP-c7-KjG"/>
                                                 </constraints>
@@ -294,6 +294,8 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="Wky-OO-488" firstAttribute="leading" secondItem="4Iu-wD-HpR" secondAttribute="leading" constant="59" id="EZv-d3-V3F"/>
+                                    <constraint firstAttribute="trailing" secondItem="ycc-sX-mM1" secondAttribute="trailing" constant="59" id="OZ9-PA-KQP"/>
+                                    <constraint firstItem="ycc-sX-mM1" firstAttribute="leading" secondItem="4Iu-wD-HpR" secondAttribute="leading" constant="59" id="VKZ-Dx-p4K"/>
                                     <constraint firstAttribute="height" constant="329.32999999999998" id="VxV-Iz-sU4"/>
                                     <constraint firstItem="HhR-Tw-ZCY" firstAttribute="leading" secondItem="4Iu-wD-HpR" secondAttribute="leading" id="lUB-yG-KEi"/>
                                     <constraint firstAttribute="trailing" secondItem="Wky-OO-488" secondAttribute="trailing" constant="59" id="twW-4x-Dmb"/>
@@ -317,7 +319,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H3e-Hd-zGM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1779.375" y="492.5"/>
+            <point key="canvasLocation" x="1778.2608695652175" y="492.39130434782612"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="L5s-rL-hdV">
