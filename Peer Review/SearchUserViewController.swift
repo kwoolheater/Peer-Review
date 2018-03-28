@@ -27,7 +27,7 @@ class SearchUserViewController: UIViewController, UITableViewDataSource, UITable
     var user: User?
     private let image = UIImage(named: "profile-big")!.withRenderingMode(.alwaysTemplate)
     private let topMessage = "Login"
-    private let bottomMessage = "You need to login to access the user rating system. Return to the Profile screen."
+    private let bottomMessage = "You need to login to access the evaluation system. Return to the Profile screen."
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)

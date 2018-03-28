@@ -32,14 +32,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var messageArray: [String] = []
     var ratingsArray: [Double] = []
     private let image = UIImage(named: "star-big")!.withRenderingMode(.alwaysTemplate)
-    private let topMessage = "No Ratings"
-    private let bottomMessage = "Interact with other Peer Review users to get ratings."
+    private let topMessage = "Contact Manager"
+    private let bottomMessage = "Contact manager to fix this error."
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureAuth()
         starView.rating = 0
-        ratingLabel.text = "Rating: No current rating"
+        ratingLabel.text = "Sign in for Evaluation"
         usernameLabel.text = displayName
         tableView.delegate = self
         tableView.dataSource = self
@@ -113,7 +113,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let roundedRating = String(format: "%.2f", overallRating)
             
             self.starView.rating = (overallRating)
-            self.ratingLabel.text = "Rating: \(roundedRating)"
+            self.ratingLabel.text = "Quarter Reviews: \(roundedRating)"
             
             self.tableView.reloadData()
         })
@@ -164,7 +164,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             self.tableView.reloadData()
             self.starView.rating = 0
             self.usernameLabel.text = "Sign In!"
-            self.ratingLabel.text = "Rating: 0.0"
+            self.ratingLabel.text = "Quarter Reviews: 0.0"
             signedInStatus(isSignedIn: false)
         }
         
