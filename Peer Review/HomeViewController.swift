@@ -37,6 +37,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        checkAuth()
         configureAuth()
         starView.rating = 0
         ratingLabel.text = "Sign in for Evaluation"
@@ -48,6 +49,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.backgroundView = emptyBackgroundView
     }
     
+    func checkAuth() {
+        user = SavedItems.sharedInstance().user
+        self.usernameLabel.text = self.user?.displayName
+        signedInStatus(isSignedIn: true)
+    }
+    
     func configureAuth() {
         // listen for changes in the authorization state
         _authHandle = Auth.auth().addStateDidChangeListener { (auth: Auth, user: User?) in
@@ -57,7 +64,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 if self.user != activeUser {
                     self.user = activeUser
                     self.signedInStatus(isSignedIn: true)
-                    let name = user!.email!.components(separatedBy: "@")[0]
                     self.usernameLabel.text = self.user?.displayName
                     SavedItems.sharedInstance().user = self.user
                 }
