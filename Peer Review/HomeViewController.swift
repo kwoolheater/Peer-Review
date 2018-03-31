@@ -151,7 +151,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func signedOut() {
-        authButton.title = "Sign In"
+        //authButton.title = "Sign In"
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func authButton(_ sender: Any) {
