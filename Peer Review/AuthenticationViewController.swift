@@ -24,9 +24,10 @@ class AuthenticationViewController: UIViewController {
             Auth.auth().signIn(withEmail: usernameField.text!, password: passField.text!) { (user, error) in
                 if error == nil {
                     SavedItems.sharedInstance().user = user!
+                    SavedItems.sharedInstance().signedIn = true
                     self.performSegue(withIdentifier: "signIn", sender: self)
                 } else {
-                    print(error as! String)
+                    print(error?.localizedDescription as! String)
                 }
             }
         } else {

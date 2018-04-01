@@ -38,10 +38,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         checkAuth()
-        configureAuth()
-        starView.rating = 0
-        ratingLabel.text = "Sign in for Evaluation"
-        usernameLabel.text = displayName
+        //configureAuth()
+        //starView.rating = 0
+        //ratingLabel.text = "Sign in for Evaluation"
+        //usernameLabel.text = displayName
         tableView.delegate = self
         tableView.dataSource = self
         tableView.addSubview(self.refreshControl)
@@ -55,7 +55,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         signedInStatus(isSignedIn: true)
     }
     
-    func configureAuth() {
+    /*func configureAuth() {
         // listen for changes in the authorization state
         _authHandle = Auth.auth().addStateDidChangeListener { (auth: Auth, user: User?) in
             // check if there is a current user
@@ -73,7 +73,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 self.loginSession()
             }
         }
-    }
+    }*/
     
     func configureDatabase() {
         ref = Database.database().reference()
@@ -125,11 +125,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         })
     }
     
-    deinit {
-        Auth.auth().removeStateDidChangeListener(_authHandle)
-        ref.child("users").child(userUid!).child("reviews").removeObserver(withHandle: _refHandle)
-    }
-    
     func signedInStatus(isSignedIn: Bool) {
         SavedItems.sharedInstance().signedIn = isSignedIn
         
@@ -141,40 +136,40 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
-    func loginSession() {
+    /*func loginSession() {
         let authViewController = FUIAuth.defaultAuthUI()!.authViewController()
         present(authViewController, animated: true, completion: nil)
-    }
+    }*/
     
     func signedIn() {
         authButton.title = "Sign Out"
     }
     
     func signedOut() {
-        //authButton.title = "Sign In"
         dismiss(animated: true, completion: nil)
     }
     
     @IBAction func authButton(_ sender: Any) {
         
-        if SavedItems.sharedInstance().signedIn == false {
-            configureAuth()
-        } else {
-            do {
-                try Auth.auth().signOut()
-            } catch {
-                print("error signing out")
-            }
-            // clear tableview
-            self.messageArray.removeAll()
-            self.ratingsArray.removeAll()
-            self.tableView.reloadData()
-            self.starView.rating = 0
-            self.usernameLabel.text = "Sign In!"
-            self.ratingLabel.text = "Quarter Reviews: 0.0"
-            signedInStatus(isSignedIn: false)
+        do {
+            try Auth.auth().signOut()
+        } catch {
+            print("error signing out")
         }
+        // clear tableview
+        self.messageArray.removeAll()
+        self.ratingsArray.removeAll()
+        self.tableView.reloadData()
+        self.starView.rating = 0
+        self.usernameLabel.text = "Sign In!"
+        self.ratingLabel.text = "Quarter Reviews: 0.0"
+        signedInStatus(isSignedIn: false)
         
+    }
+    
+    deinit {
+        //Auth.auth().removeStateDidChangeListener(_authHandle)
+        //ref.child("users").child(userUid!).child("reviews").removeObserver(withHandle: _refHandle)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -203,7 +198,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(ViewController.handleRefresh(_:)), for: UIControlEvents.valueChanged)
-        
         return refreshControl
     }()
     
