@@ -20,7 +20,7 @@ class AuthenticationViewController: UIViewController {
     }
     
     @IBAction func signIn(_ sender: Any) {
-        if usernameField.text != nil && passField.text != nil {
+        if usernameField.text != nil || passField.text != nil {
             Auth.auth().signIn(withEmail: usernameField.text!, password: passField.text!) { (user, error) in
                 if error == nil {
                     SavedItems.sharedInstance().user = user!
@@ -30,6 +30,10 @@ class AuthenticationViewController: UIViewController {
                     print(error?.localizedDescription as! String)
                 }
             }
+        } else if usernameField == nil {
+            usernameField.layer.borderColor = UIColor.red.cgColor
+        } else if passField == nil {
+            passField.layer.borderColor = UIColor.red.cgColor
         } else {
             
         }
