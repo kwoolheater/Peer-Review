@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4129588A21E006A80047BFB1 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4129588921E006A80047BFB1 /* ProfileTableViewController.swift */; };
+		4129588C21E00F930047BFB1 /* CommentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4129588B21E00F930047BFB1 /* CommentsTableViewCell.swift */; };
+		4129588E21E00FA40047BFB1 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4129588D21E00FA40047BFB1 /* ProfileTableViewCell.swift */; };
 		41678C3E1FC330D500446E36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41678C3D1FC330D500446E36 /* AppDelegate.swift */; };
 		41678C401FC330D500446E36 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41678C3F1FC330D500446E36 /* HomeViewController.swift */; };
 		41678C431FC330D500446E36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41678C411FC330D500446E36 /* Main.storyboard */; };
@@ -24,6 +27,9 @@
 
 /* Begin PBXFileReference section */
 		374A1DD4E05AFBA63DD0D46C /* Pods-Peer Review.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Peer Review.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Peer Review/Pods-Peer Review.debug.xcconfig"; sourceTree = "<group>"; };
+		4129588921E006A80047BFB1 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
+		4129588B21E00F930047BFB1 /* CommentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsTableViewCell.swift; sourceTree = "<group>"; };
+		4129588D21E00FA40047BFB1 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		41678C3A1FC330D500446E36 /* Peer Review.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Peer Review.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		41678C3D1FC330D500446E36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41678C3F1FC330D500446E36 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -82,7 +88,10 @@
 				41FA42C01FC77D52002186F3 /* SearchUserViewController.swift */,
 				417D7D8A1FD0A782006CFB43 /* DetailViewController.swift */,
 				41E121021FED9391008454BF /* EmptyBackgroundView.swift */,
+				4129588921E006A80047BFB1 /* ProfileTableViewController.swift */,
 				41DD33AD1FD72DC2000F422B /* SavedItems.swift */,
+				4129588D21E00FA40047BFB1 /* ProfileTableViewCell.swift */,
+				4129588B21E00F930047BFB1 /* CommentsTableViewCell.swift */,
 				41678C411FC330D500446E36 /* Main.storyboard */,
 				41678C441FC330D500446E36 /* Assets.xcassets */,
 				41678C461FC330D500446E36 /* LaunchScreen.storyboard */,
@@ -284,9 +293,12 @@
 				41FA42C11FC77D52002186F3 /* SearchUserViewController.swift in Sources */,
 				417D7D8B1FD0A782006CFB43 /* DetailViewController.swift in Sources */,
 				41BF13D820713C74000BE616 /* SignUpViewController.swift in Sources */,
+				4129588E21E00FA40047BFB1 /* ProfileTableViewCell.swift in Sources */,
 				41E121031FED9391008454BF /* EmptyBackgroundView.swift in Sources */,
 				41BF13D620700039000BE616 /* AuthenticationViewController.swift in Sources */,
 				41678C401FC330D500446E36 /* HomeViewController.swift in Sources */,
+				4129588A21E006A80047BFB1 /* ProfileTableViewController.swift in Sources */,
+				4129588C21E00F930047BFB1 /* CommentsTableViewCell.swift in Sources */,
 				41DD33AE1FD72DC2000F422B /* SavedItems.swift in Sources */,
 				41678C3E1FC330D500446E36 /* AppDelegate.swift in Sources */,
 			);

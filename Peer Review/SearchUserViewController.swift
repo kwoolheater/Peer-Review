@@ -136,7 +136,7 @@ class SearchUserViewController: UIViewController, UITableViewDataSource, UITable
     
     lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action: #selector(ViewController.handleRefresh(_:)), for: UIControlEvents.valueChanged)
+        refreshControl.addTarget(self, action: #selector(SearchUserViewController.handleRefresh(_:)), for: UIControlEvents.valueChanged)
         
         return refreshControl
     }()

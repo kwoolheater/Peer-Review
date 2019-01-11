@@ -16,9 +16,9 @@ class EmptyBackgroundView: UIView {
     private var topLabel: UILabel!
     private var bottomLabel: UILabel!
     
-    private var topColor = UIColor.darkGray
+    private var topColor = UIColor.white
     private var topFont = UIFont.boldSystemFont(ofSize: 22)
-    private var bottomColor = UIColor.gray
+    private var bottomColor = UIColor.white
     private let bottomFont = UIFont.systemFont(ofSize: 18)
     
     private let spacing: CGFloat = 10

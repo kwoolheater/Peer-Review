@@ -31,8 +31,9 @@ class DetailViewController: UIViewController {
         configureDatabase()
         nameLabel.text = email
         addTextViewBorder()
-       // NotificationCenter.default.addObserver(self, selector: #selector(DetailViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-      //  NotificationCenter.default.addObserver(self, selector: #selector(DetailViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        textView.layer.borderColor = UIColor(red:1.00, green:0.82, blue:0.33, alpha:1.0).cgColor
+        textView.layer.borderWidth = 2
+        UITextView.appearance().tintColor = UIColor(red:1.00, green:0.82, blue:0.33, alpha:1.0)
         self.hideKeyboardWhenTappedAround()
     }
     
