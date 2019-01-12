@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -13,11 +13,11 @@
             buildForProfiling = "YES"
             buildForArchiving = "YES">
             <BuildableReference
-               BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'BC5000D645EEAF961C85907CDC796FE1'
-               BlueprintName = 'FBSDKLoginKit'
-               ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'FBSDKLoginKit.framework'>
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3C19398A0C3F88C9B63A0DE30135F5CA"
+               BlueprintName = "FBSDKLoginKit"
+               ReferencedContainer = "container:Pods.xcodeproj"
+               BuildableName = "FBSDKLoginKit.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

@@ -86,8 +86,6 @@ class ProfileTableViewController: UITableViewController {
                 }
             }
             
-            self.ratingArray.append(["rating": 4.0, "message": "Thought I scored you a 4 I am truly disappionted in your preformance this year. I expected much more from you as an employee"])
-            
             var count = 0.0
             var sum = 0.0
             for value in self.ratingsArray {

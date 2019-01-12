@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -13,11 +13,11 @@
             buildForProfiling = "YES"
             buildForArchiving = "YES">
             <BuildableReference
-               BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'C071A67539F703A03474C98B9CEFF247'
-               BlueprintName = 'Protobuf'
-               ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Protobuf.framework'>
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2356FA253B10910A6122F8FD78060EFD"
+               BlueprintName = "Protobuf"
+               ReferencedContainer = "container:Pods.xcodeproj"
+               BuildableName = "Protobuf.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
